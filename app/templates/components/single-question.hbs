@@ -1,1 +1,12 @@
-{{yield}}
+<h2>{{questionNumber}} {{@question.headline}}</h2>
+<br/>
+<p>{{@question.question_type}}</p>
+<br/>
+
+{{#unless @isLastQuestion}}
+    <button class="button" {{on "click" this.next}} >Next</button>
+{{/unless}}
+
+{{#if @index}}
+    <button class="button" {{on "click" this.previous}}>Previous</button>
+{{/if}}
