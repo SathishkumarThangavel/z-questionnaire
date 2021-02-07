@@ -1,12 +1,20 @@
-<h2>{{questionNumber}} {{@question.headline}}</h2>
-<br/>
-<p>{{@question.question_type}}</p>
-<br/>
+<div class="question-container">
+    <div class="light-text">{{"Frage"}} {{questionNumber}}</div>
+    <h2>{{@question.headline}}</h2>
+    <br/>
 
-{{#unless @isLastQuestion}}
-    <button class="button" {{on "click" this.next}} >Next</button>
-{{/unless}}
+    <FormField
+        @type = {{@question.question_type}}
+        @identifier = {{@question.identifier}}
+        @required = {{@question.identifier}}
+        @question = {{@question}}
+    />
 
-{{#if @index}}
-    <button class="button" {{on "click" this.previous}}>Previous</button>
-{{/if}}
+    {{!-- {{#if @index}}
+        <div class="button" {{on "click" this.previous}}>Previous</div>
+    {{/if}}
+
+    {{#unless @isLastQuestion}}
+        <div class="button" {{on "click" this.next}} >Next</div>
+    {{/unless}} --}}
+</div>

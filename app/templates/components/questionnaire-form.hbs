@@ -1,5 +1,12 @@
+<AppHeader />
 <SingleQuestion
     @question={{currentQuestion}}
+    @index={{questionIndex}}
+    @isLastQuestion={{isLastQuestion}}
+    @next={{action "showNext"}}
+    @previous={{action "showPrevious"}}
+/>
+<AppFooter
     @index={{questionIndex}}
     @isLastQuestion={{isLastQuestion}}
     @next={{action "showNext"}}

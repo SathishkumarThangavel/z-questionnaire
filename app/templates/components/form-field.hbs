@@ -1,0 +1,11 @@
+{{#if isMultiChoice}}
+<MultiChoice
+    @choices = {{@question.choices}}
+    @identifier = {{@identifier}}
+    @multiple = {{@question.multiple}}
+/>
+{{else if isTextArea}}
+    <textarea id={{@identifier}} />
+{{else if isTextField}}
+    <input id={{@identifier}} />
+{{/if}}
