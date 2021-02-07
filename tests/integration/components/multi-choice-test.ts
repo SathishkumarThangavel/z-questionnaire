@@ -9,18 +9,10 @@ module('Integration | Component | multi-choice', function(hooks) {
   test('it renders', async function(assert) {
     // Set any properties with this.set('myProperty', 'value');
     // Handle any actions with this.set('myAction', function(val) { ... });
+    this.set('choicesObj', [{id:1, value:'', label:''}]);
 
-    await render(hbs`{{multi-choice}}`);
+    await render(hbs`<MultiChoice @choices={{this.choicesObj}} />`);
 
-    assert.equal(this.element?.textContent?.trim(), '');
-
-    // Template block usage:
-    await render(hbs`
-      {{#multi-choice}}
-        template block text
-      {{/multi-choice}}
-    `);
-
-    assert.equal(this.element?.textContent?.trim(), 'template block text');
+    assert.equal(this.element?.textContent?.trim(), 'A');
   });
 });

@@ -13,14 +13,5 @@ module('Integration | Component | multi-choice-option', function(hooks) {
     await render(hbs`{{multi-choice-option}}`);
 
     assert.equal(this.element?.textContent?.trim(), '');
-
-    // Template block usage:
-    await render(hbs`
-      {{#multi-choice-option}}
-        template block text
-      {{/multi-choice-option}}
-    `);
-
-    assert.equal(this.element?.textContent?.trim(), 'template block text');
   });
 });

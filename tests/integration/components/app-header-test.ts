@@ -7,20 +7,18 @@ module('Integration | Component | app-header', function(hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function(assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
 
-    await render(hbs`{{app-header}}`);
+    await render(hbs`<AppHeader />`);
 
-    assert.equal(this.element?.textContent?.trim(), '');
+    assert.equal(this.element?.textContent?.trim(), 'Privathaftpflichtversicherung');
+  });
 
-    // Template block usage:
-    await render(hbs`
-      {{#app-header}}
-        template block text
-      {{/app-header}}
-    `);
+  test('Show insurance logo', async function(assert) {
 
-    assert.equal(this.element?.textContent?.trim(), 'template block text');
+    await render(hbs`<AppHeader />`);
+
+    assert.ok(this.element?.querySelector('svg'));
+
+    assert.equal(this.element?.querySelector('svg')?.getAttribute('class'), 'icon');
   });
 });

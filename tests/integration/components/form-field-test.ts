@@ -13,14 +13,5 @@ module('Integration | Component | form-field', function(hooks) {
     await render(hbs`{{form-field}}`);
 
     assert.equal(this.element?.textContent?.trim(), '');
-
-    // Template block usage:
-    await render(hbs`
-      {{#form-field}}
-        template block text
-      {{/form-field}}
-    `);
-
-    assert.equal(this.element?.textContent?.trim(), 'template block text');
   });
 });

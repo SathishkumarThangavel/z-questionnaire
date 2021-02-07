@@ -7,20 +7,29 @@ module('Integration | Component | app-footer', function(hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function(assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
 
-    await render(hbs`{{app-footer}}`);
+    await render(hbs`<AppFooter />`);
 
     assert.equal(this.element?.textContent?.trim(), '');
+  });
 
-    // Template block usage:
-    await render(hbs`
-      {{#app-footer}}
-        template block text
-      {{/app-footer}}
-    `);
+  test('show logo and accessiblity', async function(assert) {
 
-    assert.equal(this.element?.textContent?.trim(), 'template block text');
+    await render(hbs`<AppFooter />`);
+
+    assert.ok(this.element?.querySelector('img'));
+
+    assert.equal(this.element?.querySelector('img')?.getAttribute('alt'), 'zquestionnaire logo')
+  });
+
+  test('show navigation buttons', async function(assert) {
+    
+    this.set('index', 1);
+
+    await render(hbs`<AppFooter @index={{this.index}} />`);
+
+    assert.ok(this.element?.querySelector('svg'));
+    
+    assert.equal(this.element?.querySelector('svg')?.getAttribute('class'), 'icon');
   });
 });

@@ -9,18 +9,9 @@ module('Integration | Component | questionnaire-form', function(hooks) {
   test('it renders', async function(assert) {
     // Set any properties with this.set('myProperty', 'value');
     // Handle any actions with this.set('myAction', function(val) { ... });
+    this.set('questions', [{}]);
+    await render(hbs`<QuestionnaireForm @questions={{this.questions}} />`);
 
-    await render(hbs`{{questionnaire-form}}`);
-
-    assert.equal(this.element?.textContent?.trim(), '');
-
-    // Template block usage:
-    await render(hbs`
-      {{#questionnaire-form}}
-        template block text
-      {{/questionnaire-form}}
-    `);
-
-    assert.equal(this.element?.textContent?.trim(), 'template block text');
+    assert.ok(this.element?.textContent?.trim().includes('Frage 1'));
   });
 });

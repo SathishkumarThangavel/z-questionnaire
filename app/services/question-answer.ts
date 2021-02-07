@@ -17,7 +17,6 @@ export default class QuestionAnswer extends Service {
   get(identifier: any) {
     return this.answers.find((answer: any) => answer.id === identifier) || {};
   }
-  
 }
 
 // DO NOT DELETE: this is how TypeScript knows how to look up your services.
