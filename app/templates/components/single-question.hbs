@@ -8,13 +8,14 @@
         @identifier = {{@question.identifier}}
         @required = {{@question.identifier}}
         @question = {{@question}}
+        @next = {{action "next"}}
     />
 
-    {{!-- {{#if @index}}
-        <div class="button" {{on "click" this.previous}}>Previous</div>
+    {{#if isTextField}}
+        <div class="button" {{on "click" this.next}}>Next</div>
     {{/if}}
 
-    {{#unless @isLastQuestion}}
-        <div class="button" {{on "click" this.next}} >Next</div>
-    {{/unless}} --}}
+     {{#if @isLastQuestion}}
+        <LinkTo @route='thankyou' @tagName='div' class="button">Submit</LinkTo>
+    {{/if}}
 </div>

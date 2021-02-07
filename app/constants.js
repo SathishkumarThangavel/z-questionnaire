@@ -9,7 +9,7 @@ const questionnaire = {
       headline: 'Wen möchtest Du versichern?',
       description: null,
       required: false,
-      multiple: 'false',
+      multiple: false,
       choices: [
         {
           label: 'Meine Familie mit Kindern',
@@ -45,7 +45,7 @@ const questionnaire = {
       headline: 'Bist Du Beamter oder im öffentlichen Dienst angestellt?',
       description: null,
       required: false,
-      multiple: 'false',
+      multiple: false,
       choices: [
         {
           label: 'Ja',
@@ -66,7 +66,7 @@ const questionnaire = {
       headline: 'Möchtest Du eine Forderungsausfalldeckung absichern?',
       description: null,
       required: false,
-      multiple: 'false',
+      multiple: false,
       choices: [
         {
           label: 'Ja',
@@ -87,7 +87,7 @@ const questionnaire = {
       headline: 'Wie wichtig ist Dir die Absicherung gegen Mietsachschäden?',
       description: null,
       required: false,
-      multiple: 'false',
+      multiple: false,
       choices: [
         {
           label: 'Wichtig',
@@ -108,7 +108,7 @@ const questionnaire = {
       headline: 'Bist Du Eigentümer einer oder mehrerer Immobilien?',
       description: null,
       required: false,
-      multiple: 'false',
+      multiple: false,
       choices: [
         {
           label: 'Ja',
@@ -152,7 +152,7 @@ const questionnaire = {
       headline: 'Gehört Dir eine selbstbewohnte Immobilie?',
       description: null,
       required: false,
-      multiple: 'false',
+      multiple: false,
       choices: [
         {
           label: 'Ja, im Inland',
@@ -183,7 +183,7 @@ const questionnaire = {
       headline: 'Hast Du eine oder mehrere vermietete Immobilien?',
       description: null,
       required: false,
-      multiple: 'false',
+      multiple: false,
       choices: [
         {
           label: 'Ja, im Inland',
@@ -214,7 +214,7 @@ const questionnaire = {
       headline: 'Möchtest Du in nächster Zeit etwas bauen oder umbauen?',
       description: null,
       required: false,
-      multiple: 'false',
+      multiple: false,
       choices: [
         {
           label: 'Ja',
@@ -236,7 +236,7 @@ const questionnaire = {
         'Wie wichtig ist Dir die Absicherung gegen beruflichen Schlüsselverlust?',
       description: null,
       required: false,
-      multiple: 'false',
+      multiple: false,
       choices: [
         {
           label: 'Wichtig',
@@ -257,7 +257,7 @@ const questionnaire = {
       headline: 'Möchtest Du den Verlust privater Schlüssel absichern?',
       description: null,
       required: false,
-      multiple: 'false',
+      multiple: false,
       choices: [
         {
           label: 'Ja',
@@ -278,7 +278,7 @@ const questionnaire = {
       headline: 'Möchtest Du im Ausland abgesichert sein?',
       description: null,
       required: false,
-      multiple: 'false',
+      multiple: false,
       choices: [
         {
           label: 'Ja, bis zu einem Monat',
@@ -304,7 +304,7 @@ const questionnaire = {
       headline: 'Hast Du ein Segelboot?',
       description: null,
       required: false,
-      multiple: 'false',
+      multiple: false,
       choices: [
         {
           label: 'Bis 4 m²',
@@ -340,7 +340,7 @@ const questionnaire = {
       headline: 'Hast Du ein Motorboot?',
       description: null,
       required: false,
-      multiple: 'false',
+      multiple: false,
       choices: [
         {
           label: 'Bis 5 PS',
@@ -377,7 +377,7 @@ const questionnaire = {
         'Möchtest Du bei einem Schadensfall einen Teil selbst bezahlen?',
       description: null,
       required: false,
-      multiple: 'false',
+      multiple: false,
       choices: [
         {
           label: 'Nein',
@@ -398,7 +398,7 @@ const questionnaire = {
       headline: 'Hast Du aktuell schon eine Privathaftpflichtversicherung?',
       description: null,
       required: false,
-      multiple: 'false',
+      multiple: false,
       choices: [
         {
           label: 'Ja',
@@ -443,7 +443,7 @@ const questionnaire = {
         'Wie viele Haftpflichtschäden hattest Du in den letzten 5 Jahren?',
       description: null,
       required: false,
-      multiple: 'false',
+      multiple: false,
       choices: [
         {
           label: 'Keine',
@@ -480,7 +480,7 @@ const questionnaire = {
         'Was wäre Dein Wunschtermin für den Beginn der Privathaftpflichtversicherung?',
       description: null,
       required: false,
-      multiline: 'false',
+      multiline: false,
       jumps: [],
     },
     {
@@ -489,7 +489,7 @@ const questionnaire = {
       headline: 'Hast Du noch weitere Informationen oder Anmerkungen für uns?',
       description: null,
       required: false,
-      multiline: 'true',
+      multiline: true,
       jumps: [],
     },
   ],
