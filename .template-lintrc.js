@@ -7,6 +7,6 @@ module.exports = {
     'no-invalid-interactive': false,
     'no-action': false,
     'no-quoteless-attributes': false,
-    'no-implicit-this': false
+    'no-implicit-this': false,
   },
 };

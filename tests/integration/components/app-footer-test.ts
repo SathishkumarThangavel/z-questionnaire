@@ -19,7 +19,7 @@ module('Integration | Component | app-footer', function(hooks) {
 
     assert.ok(this.element?.querySelector('img'));
 
-    assert.equal(this.element?.querySelector('img')?.getAttribute('alt'), 'zquestionnaire logo')
+    assert.equal(this.element?.querySelector('img')?.getAttribute('alt'), 'zquestionnaire')
   });
 
   test('show navigation buttons', async function(assert) {
