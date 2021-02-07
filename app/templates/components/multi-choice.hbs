@@ -1,0 +1,8 @@
+<div class="multichoice">
+    {{#each @choices as |choice index|}}
+        <MultiChoiceOption
+            @choice = {{choice}}
+            @index = {{index}}
+        />
+    {{/each}}
+</div>

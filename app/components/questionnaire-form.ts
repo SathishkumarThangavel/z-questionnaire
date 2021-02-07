@@ -18,13 +18,31 @@ export default class QuestionnaireForm extends Component<QuestionnaireFormArgs> 
     }
 
     @action
-    showNext() {
+    async showNext() {
         // ToDo implement Jump Logic
         this.questionIndex++;
+        await this.prevTransition();
     }
 
     @action
-    showPrevious() {
+    async showPrevious() {
         this.questionIndex--;
+        await this.nextTransition();
+    }
+
+    @action
+    nextTransition() {
+        const ele = document.getElementsByClassName('question-container')[0];
+        ele.classList.remove('prev-question');
+        ele.classList.add('next-question');
+        setTimeout(() => { ele.classList.remove('next-question'); }, 500);
+    }
+
+    @action
+    async prevTransition() {
+        const ele = document.getElementsByClassName('question-container')[0];
+        ele.classList.remove('next-question');
+        ele.classList.add('prev-question');
+        setTimeout(() => { ele.classList.remove('prev-question'); }, 600);
     }
 }

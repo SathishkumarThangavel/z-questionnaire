@@ -1,8 +1,14 @@
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 767px) {
     :root {
         font-size: 10px;
     }
     .hero-texts {
+        width: 100%;
+    }
+    .question-container {
+        margin: 150px auto 0;
+    }
+    .option-button {
         width: 100%;
     }
 }
