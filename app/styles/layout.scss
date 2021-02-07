@@ -49,17 +49,21 @@
   right: 0;
   padding: 15px;
   .logo {
-    width: 175px;
+    width: 140px;
     float: right;
     margin: 10px;
+    margin-right: 100px;
   }
   .icon {
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     float: right;
     margin: 10px;
-    opacity: 0.7;
+    opacity: 0.6;
     cursor: pointer;
+    &:hover {
+      opacity: 1;
+    }
   }
 }
 
@@ -68,6 +72,11 @@
     max-width: 70%;
     margin: 300px auto 0;
     text-align: center;
+}
+.multichoice {
+  justify-content: space-between;
+  flex-wrap: wrap;
+  display: flex;
 }
 .next-question {
   -webkit-animation: questionHorizontalNext 0.5s forwards;

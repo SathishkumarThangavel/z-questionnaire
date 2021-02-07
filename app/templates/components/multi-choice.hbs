@@ -1,8 +1,11 @@
 <div class="multichoice">
-    {{#each @choices as |choice index|}}
+    {{#each choices as |choice index|}}
         <MultiChoiceOption
             @choice = {{choice}}
             @index = {{index}}
+            @identifier = {{@identifier}}
+            @selected = {{get choice 'selected'}}
+            @onChange = {{action "onChange"}}
         />
     {{/each}}
 </div>

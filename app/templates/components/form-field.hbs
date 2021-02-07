@@ -3,9 +3,10 @@
     @choices = {{@question.choices}}
     @identifier = {{@identifier}}
     @multiple = {{@question.multiple}}
+    @next = {{action "next"}}
 />
 {{else if isTextArea}}
-    <textarea id={{@identifier}} />
+    <textarea class="text-area" id={{@identifier}} autofocus/>
 {{else if isTextField}}
-    <input id={{@identifier}} />
+    <input class="input-field" id={{@identifier}} autofocus=true/>
 {{/if}}

@@ -1,10 +1,12 @@
+import { action } from '@ember/object';
 import Component from '@glimmer/component';
 
 interface FormFieldArgs {
     type: String,
     identifier: String,
     required: Boolean,
-    question: any
+    question: any,
+    next: any
 }
 
 export default class FormField extends Component<FormFieldArgs> {
@@ -18,6 +20,11 @@ export default class FormField extends Component<FormFieldArgs> {
 
     get isTextField() {
         return this.args.type === 'text' && !this.args.question.multiline;
+    }
+
+    @action
+    next() {
+        this.args.next();
     }
 
 }

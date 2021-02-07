@@ -4,13 +4,18 @@ import { A } from '@ember/array';
 export default class QuestionAnswer extends Service {
   answers:any = A([]);
 
-  add(answer: any) {
-    this.answers.pushObject(answer);
+  set(answer: any) {
+    const index = this.answers.findIndex((obj:any) => obj.id === answer.id);
+
+    if (index > -1) {
+      this.answers[index] = answer;
+    } else {
+      this.answers.pushObject(answer);
+    }
   }
 
-  update(answer: any) {
-    const index = this.answers.findIndex((obj:any) => obj.id === answer.id);
-    this.answers[index] = answer;
+  get(identifier: any) {
+    return this.answers.find((answer: any) => answer.id === identifier) || {};
   }
   
 }

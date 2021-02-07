@@ -8,7 +8,8 @@
   cursor: pointer;
   background-color: var(--button-color);
   transition: 0.5s;
-  display: inline-block;
+  display: block;
+  margin-top: 100px;
   &:hover {
     background-color: var(--button-hover-color);
   }
@@ -28,11 +29,6 @@ img {
   margin: 0 0 -8px;
 }
 
-.multichoice {
-  justify-content: space-between;
-  flex-wrap: wrap;
-  display: flex;
-}
 .option-button {
   display: flex;
   width: calc(50% - 8px);
@@ -67,4 +63,21 @@ img {
     align-items: center;
     justify-content: center
   }
+}
+.text-area {
+  width: 455px;
+  padding: 15px;
+  font-size: 1.5rem;
+  outline: none;
+  height: 100px;
+}
+
+.input-field {
+  border: 0;
+  outline: none;
+  border-bottom: 1px solid #ccc;
+  width: 400px;
+  margin-top: 50px;
+  padding: 15px;
+  font-size: 1.5rem;
 }

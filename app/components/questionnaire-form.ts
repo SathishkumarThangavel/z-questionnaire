@@ -3,7 +3,8 @@ import { action } from "@ember/object";
 import { tracked } from '@glimmer/tracking';
 
 interface QuestionnaireFormArgs {
-    questions: any
+    questions: any,
+    submit: any
 }
 
 export default class QuestionnaireForm extends Component<QuestionnaireFormArgs> {
@@ -16,7 +17,6 @@ export default class QuestionnaireForm extends Component<QuestionnaireFormArgs> 
     get isLastQuestion() {
         return !this.args.questions[this.questionIndex+1];
     }
-
     @action
     async showNext() {
         // ToDo implement Jump Logic
@@ -35,7 +35,7 @@ export default class QuestionnaireForm extends Component<QuestionnaireFormArgs> 
         const ele = document.getElementsByClassName('question-container')[0];
         ele.classList.remove('prev-question');
         ele.classList.add('next-question');
-        setTimeout(() => { ele.classList.remove('next-question'); }, 500);
+        setTimeout(() => { ele.classList.remove('next-question'); }, 100);
     }
 
     @action
