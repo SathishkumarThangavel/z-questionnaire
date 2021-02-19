@@ -1,8 +1,9 @@
 import Route from '@ember/routing/route';
-import questionnaire from '../constants';
 
 export default class Questions extends Route {
-  model() {
-    return questionnaire.questions;
+  async model() {
+    let response = await fetch('/api/questionnaire.json');
+    let parsed:any = await response.json();
+    return parsed.questionnaire?.questions;
   }
 }
